@@ -712,7 +712,9 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-
+.about-text{
+  flex: 1;
+}
 .about-text .section-label {
   margin-bottom: clamp(12px, 2.5vw, 20px);
 }
@@ -1219,6 +1221,7 @@ hr {
   margin: 0;
   padding: 0;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #1E1E1E;
 }
 
 .contact-content {

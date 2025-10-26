@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.0/build/css/intlTelInput.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rtl.css">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
                         +971 64493809
                     </span>
                 </div>
-                <div class="slogan">We Provide Best Services For You</div>
+                <div class="slogan" data-i18n="topbar-slogan">We Provide Best Services For You</div>
             </div>
         </div>
     </div>
@@ -51,17 +52,17 @@
                     <span class="logo-text">Weideliver</span>
                 </div>
                 <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about" data-i18n="nav-about">About</a>
+                    <a href="#services" data-i18n="nav-services">Services</a>
+                    <a href="#pricing" data-i18n="nav-pricing">Pricing</a>
+                    <a href="#contact" data-i18n="nav-contact">Contact</a>
                 </div>
                 <div class="language-switcher">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" />
                     </svg>
-                    <span>Language EN</span>
+                    <span data-i18n="nav-lang">Language EN</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M7 10l5 5 5-5z" />
                     </svg>
@@ -80,14 +81,15 @@
                 <div class="hero-text">
 
                     <div class="hero-slide active" data-slide="0">
-                        <h1>Weideliver Store Solutions</h1>
-                        <p>Never miss a sale. Deliver More. Pay Less. Grow Faster, Don't Let Delivery Costs Eat Your
+                        <h1 data-i18n="hero-store-title">Weideliver Store Solutions</h1>
+                        <p data-i18n="hero-store-desc">Never miss a sale. Deliver More. Pay Less. Grow Faster, Don't Let
+                            Delivery Costs Eat Your
                             Profits.</p>
                         <div class="hero-cta">
-                            <button class="cta-button">Join us Now and start saving!</button>
+                            <button class="cta-button" data-i18n="hero-store-cta">Join us Now and start saving!</button>
                         </div>
                         <div class="app-download">
-                            <p>Download Weideliver Store app</p>
+                            <p data-i18n="hero-store-app">Download Weideliver Store app</p>
                             <div class="app-badges">
                                 <a href="#" class="app-badge">
                                     <img src="assets/appstore.png" alt="Download on the App Store">
@@ -101,14 +103,15 @@
 
 
                     <div class="hero-slide" data-slide="1">
-                        <h1>For Drivers: Build Your Career on Your Terms</h1>
-                        <p>Join a platform that values your work and gives you the flexibility to earn the way you want.
+                        <h1 data-i18n="hero-driver-title">For Drivers: Build Your Career on Your Terms</h1>
+                        <p data-i18n="hero-driver-desc">Join a platform that values your work and gives you the
+                            flexibility to earn the way you want.
                         </p>
                         <div class="hero-cta">
-                            <button class="cta-button">Start Driving Today!</button>
+                            <button class="cta-button" data-i18n="hero-driver-cta">Start Driving Today!</button>
                         </div>
                         <div class="app-download">
-                            <p>Download Weideliver Driver app</p>
+                            <p data-i18n="hero-driver-app">Download Weideliver Driver app</p>
                             <div class="app-badges">
                                 <a href="#" class="app-badge">
                                     <img src="assets/appstore.png" alt="Download on the App Store">
@@ -148,9 +151,10 @@
     <section class="why-choose" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Why Choose Weideliver?</span>
-                <h2>The Regional Advantage</h2>
-                <p>We are more than a software provider; we are your local partner in growth. Our solution is built in
+                <span class="section-label" data-i18n="about-label">Why Choose Weideliver?</span>
+                <h2 data-i18n="about-title">The Regional Advantage</h2>
+                <p data-i18n="about-desc">We are more than a software provider; we are your local partner in growth. Our
+                    solution is built in
                     the region, for the region.</p>
             </div>
             <div class="features-grid">
@@ -158,24 +162,27 @@
                     <div class="feature-icon red">
                         <img src="assets/3.png" alt="Market-Fit Focus">
                     </div>
-                    <h3>Market-Fit Focus</h3>
-                    <p>Our features, from flexible subscription plans to our driver network model, are directly designed
+                    <h3 data-i18n="about-feature1-title">Market-Fit Focus</h3>
+                    <p data-i18n="about-feature1-desc">Our features, from flexible subscription plans to our driver
+                        network model, are directly designed
                         to address the specific needs of the UAE and GCC business landscape.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon yellow">
                         <img src="assets/2png.png" alt="Cultural Understanding">
                     </div>
-                    <h3>Cultural Understanding</h3>
-                    <p>We understand the nuances of local commerce, customer service expectations, and the spirit of
+                    <h3 data-i18n="about-feature2-title">Cultural Understanding</h3>
+                    <p data-i18n="about-feature2-desc">We understand the nuances of local commerce, customer service
+                        expectations, and the spirit of
                         entrepreneurship that drives this market.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon blue">
                         <img src="assets/1png.png" alt="A Partnership for Growth">
                     </div>
-                    <h3>A Partnership for Growth</h3>
-                    <p>When you choose Weideliver, you are not just getting a tool. You are gaining a partner invested
+                    <h3 data-i18n="about-feature3-title">A Partnership for Growth</h3>
+                    <p data-i18n="about-feature3-desc">When you choose Weideliver, you are not just getting a tool. You
+                        are gaining a partner invested
                         in your success, backed by the technological prowess of Innovent.</p>
                 </div>
             </div>
@@ -187,13 +194,14 @@
                                 <img src="assets/customerSatis.png" alt="">
                             </div>
                             <div class="survey-text">
-                                <h4>Customer Satisfaction Survey</h4>
-                                <p>Let us know how we're doing — your feedback drives our improvements.</p>
+                                <h4 data-i18n="survey-title">Customer Satisfaction Survey</h4>
+                                <p data-i18n="survey-desc">Let us know how we're doing — your feedback drives our
+                                    improvements.</p>
                             </div>
                         </div>
                     </div>
 
-                    <button class="survey-button">Start Survey</button>
+                    <button class="survey-button" data-i18n="survey-button">Start Survey</button>
                 </div>
             </div>
         </div>
@@ -204,15 +212,17 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <span class="section-label">About Weideliver</span>
-                    <h2>Powering Commerce, One Delivery at a Time</h2>
-                    <p class="subtitle">Driven by Technology, Defined by Partnership.</p>
-                    <p class="description">We believe that every business deserves access to reliable, cost-effective
+                    <span class="section-label" data-i18n="about-section-label">About Weideliver</span>
+                    <h2 data-i18n="about-section-title">Powering Commerce, One Delivery at a Time</h2>
+                    <p class="subtitle" data-i18n="about-section-subtitle">Driven by Technology, Defined by Partnership.
+                    </p>
+                    <p class="description" data-i18n="about-section-desc">We believe that every business deserves access
+                        to reliable, cost-effective
                         delivery solutions. Our platform bridges the gap between traditional commerce and modern
                         logistics, empowering businesses to focus on what they do best while we handle the rest.</p>
 
                     <div class="download-section">
-                        <h3>Download Weideliver Store app</h3>
+                        <h3 data-i18n="download-store-app">Download Weideliver Store app</h3>
                         <div class="app-badges">
                             <a href="#" class="app-badge">
                                 <img src="assets/appstore.png" alt="Download on the App Store">
@@ -224,7 +234,7 @@
                     </div>
 
                     <div class="download-section">
-                        <h3>Download Weideliver Driver app</h3>
+                        <h3 data-i18n="download-driver-app">Download Weideliver Driver app</h3>
                         <div class="app-badges">
                             <a href="#" class="app-badge">
                                 <img src="assets/appstore.png" alt="Download on the App Store">
@@ -244,21 +254,23 @@
     <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Our Services</span>
-                <h2>Tailored Logistics Solutions for Everyone</h2>
-                <p>At Weideliver, we don't believe in one-size-fits-all. We provide specialized platforms that empower
+                <span class="section-label" data-i18n="services-label">Our Services</span>
+                <h2 data-i18n="services-title">Tailored Logistics Solutions for Everyone</h2>
+                <p data-i18n="services-desc">At Weideliver, we don't believe in one-size-fits-all. We provide
+                    specialized platforms that empower
                     each key player in the delivery ecosystem—businesses, drivers, and fleet partners—to operate more
                     efficiently and profitably.</p>
             </div>
             <div class="services-tabs">
-                <button class="tab-button active">Business Owners</button>
-                <button class="tab-button">Drivers</button>
-                <button class="tab-button">Fleet & Logistics Companies</button>
+                <button class="tab-button active" data-i18n="tab-business">Business Owners</button>
+                <button class="tab-button" data-i18n="tab-drivers">Drivers</button>
+                <button class="tab-button" data-i18n="tab-fleet">Fleet & Logistics Companies</button>
             </div>
 
             <div class="services-subsection owners-subsection active-content">
-                <h3 class="services-subheading">Launch & Scale Your Delivery</h3>
-                <p class="services-description">Offer reliable, last-mile delivery without the overhead of managing a
+                <h3 class="services-subheading" data-i18n="services-subheading">Launch & Scale Your Delivery</h3>
+                <p class="services-description" data-i18n="services-subdesc">Offer reliable, last-mile delivery without
+                    the overhead of managing a
                     full-time team. Choose the model that fits your stage of growth.</p>
             </div>
 
@@ -531,48 +543,52 @@
     <section class="faq-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">FAQ</span>
-                <h2>Your Questions, Answered</h2>
-                <p>Explore our most asked questions and learn how we can help you succeed.</p>
+                <span class="section-label" data-i18n="faq-label">FAQ</span>
+                <h2 data-i18n="faq-title">Your Questions, Answered</h2>
+                <p data-i18n="faq-desc">Explore our most asked questions and learn how we can help you succeed.</p>
             </div>
             <div class="faq-grid">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>We can't afford to hire drivers?</h3>
+                        <h3 data-i18n="faq-q1">We can't afford to hire drivers?</h3>
                         <img class="faq-icon" src="assets/chevron-down.png" alt="We can't afford to hire drivers?">
                     </div>
                     <div class="faq-answer">
-                        <p>You don't have to! Our Pro Plan gives you a full delivery service for a fraction of the cost
+                        <p data-i18n="faq-a1">You don't have to! Our Pro Plan gives you a full delivery service for a
+                            fraction of the cost
                             of one full-time driver. Let us show you how delivery can pay for itself</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>We're too small for delivery?</h3>
+                        <h3 data-i18n="faq-q2">We're too small for delivery?</h3>
                         <img class="faq-icon" src="assets/chevron-down.png" alt="We can't afford to hire drivers?">
                     </div>
                     <div class="faq-answer">
-                        <p>That's exactly why we created the On-Demand Plan. Start with just one order a day. There's no
+                        <p data-i18n="faq-a2">That's exactly why we created the On-Demand Plan. Start with just one
+                            order a day. There's no
                             commitment, so you can grow at your own pace</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>We already use a delivery aggregator?</h3>
+                        <h3 data-i18n="faq-q3">We already use a delivery aggregator?</h3>
                         <img class="faq-icon" src="assets/chevron-down.png" alt="We can't afford to hire drivers?">
                     </div>
                     <div class="faq-answer">
-                        <p>Great! Now, use our platform to handle the actual delivery for those orders. You'll save
+                        <p data-i18n="faq-a3">Great! Now, use our platform to handle the actual delivery for those
+                            orders. You'll save
                             money, get more reliable service, and keep your customers happier</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>We want to think about it ?</h3>
+                        <h3 data-i18n="faq-q4">We want to think about it ?</h3>
                         <img class="faq-icon" src="assets/chevron-down.png" alt="We can't afford to hire drivers?">
                     </div>
                     <div class="faq-answer">
-                        <p>I understand. Let me lock in your FIRST MONTH FREE offer today. You can test the entire
+                        <p data-i18n="faq-a4">I understand. Let me lock in your FIRST MONTH FREE offer today. You can
+                            test the entire
                             system with our On-Demand Plan and see the results for yourself, risk-free</p>
                     </div>
                 </div>
@@ -584,31 +600,34 @@
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Contact Us</span>
-                <h2>Connect With Our Team</h2>
-                <p>Have a question or idea? We'd love to hear from you.</p>
+                <span class="section-label" data-i18n="contact-label">Contact Us</span>
+                <h2 data-i18n="contact-title">Connect With Our Team</h2>
+                <p data-i18n="contact-desc">Have a question or idea? We'd love to hear from you.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Enter Your Name">
+                            <label for="name" data-i18n="contact-name">Name</label>
+                            <input type="text" id="name" placeholder="Enter Your Name"
+                                data-i18n-placeholder="contact-name-placeholder">
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" placeholder="mmm@info.com">
+                            <label for="email" data-i18n="contact-email">E-mail</label>
+                            <input type="email" id="email" placeholder="mmm@info.com"
+                                data-i18n-placeholder="contact-email-placeholder">
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="phone-input-field"
-                                placeholder="Enter your phone number">
+                            <label for="phone" data-i18n="contact-phone">Phone Number</label>
+                            <input type="tel" id="phone" class="phone-input-field" placeholder="Enter your phone number"
+                                data-i18n-placeholder="contact-phone-placeholder">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Enter Your Message"></textarea>
+                            <label for="message" data-i18n="contact-message">Message</label>
+                            <textarea id="message" placeholder="Enter Your Message"
+                                data-i18n-placeholder="contact-message-placeholder"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Send</button>
+                        <button type="submit" class="submit-button" data-i18n="contact-send">Send</button>
                     </form>
                 </div>
                 <div class="contact-illustration">
@@ -627,14 +646,14 @@
                     <img src="assets/footerlogo.png" alt="Weideliver">
                 </div>
                 <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about" data-i18n="footer-about">About</a>
+                    <a href="#services" data-i18n="footer-services">Services</a>
+                    <a href="#pricing" data-i18n="footer-pricing">Pricing</a>
+                    <a href="#contact" data-i18n="footer-contact">Contact</a>
                 </div>
                 <div class="footer-downloads">
                     <div class="download-section">
-                        <p>Download Weideliver Store app</p>
+                        <p data-i18n="footer-download-store">Download Weideliver Store app</p>
                         <div class="app-badges">
                             <a href="#" class="app-badge">
                                 <img src="assets/appstore.png" alt="Download on the App Store">
@@ -645,7 +664,7 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <p>Stay in touch with us</p>
+                        <p data-i18n="footer-stay-in-touch">Stay in touch with us</p>
                         <div class="social-icons">
                             <a href="#" class="social-icon whatsapp">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -674,7 +693,7 @@
                         </div>
                     </div>
                     <div class="download-section">
-                        <p>Download Weideliver Driver app</p>
+                        <p data-i18n="footer-download-driver">Download Weideliver Driver app</p>
                         <div class="app-badges">
                             <a href="#" class="app-badge">
                                 <img src="assets/appstore.png" alt="Download on the App Store">
@@ -689,10 +708,11 @@
         </div>
     </footer>
     <div class="footer-bottom">
-        <p>All Rights Reserved © Suliit 2025</p>
+        <p data-i18n="footer-rights">All Rights Reserved © Suliit 2025</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.0/build/js/intlTelInput.min.js"></script>
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 
