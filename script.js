@@ -105,6 +105,96 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Country Code Dropdown Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const countryCodeBtn = document.querySelector('.country-code');
+
+    if (countryCodeBtn) {
+        // Create dropdown menu
+        const dropdown = document.createElement('div');
+        dropdown.className = 'country-dropdown';
+        dropdown.style.cssText = `
+            position: absolute;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+            margin-top: 4px;
+        `;
+
+        // Add country options
+        const countries = [
+            { flag: '🇦🇪', code: '971', name: 'UAE' },
+            { flag: '🇸🇦', code: '966', name: 'Saudi Arabia' },
+            { flag: '🇰🇼', code: '965', name: 'Kuwait' },
+            { flag: '🇧🇭', code: '973', name: 'Bahrain' },
+            { flag: '🇴🇲', code: '968', name: 'Oman' },
+            { flag: '🇶🇦', code: '974', name: 'Qatar' },
+            { flag: '🇪🇬', code: '20', name: 'Egypt' },
+            { flag: '🇯🇴', code: '962', name: 'Jordan' },
+        ];
+
+        countries.forEach(country => {
+            const option = document.createElement('div');
+            option.className = 'country-option';
+            option.style.cssText = `
+                padding: 10px 15px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                transition: background-color 0.2s;
+            `;
+            option.innerHTML = `
+                <span style="font-size: 20px;">${country.flag}</span>
+                <span>+${country.code}</span>
+                <span style="color: #6b7280; flex: 1; text-align: right;">${country.name}</span>
+            `;
+
+            option.addEventListener('mouseenter', () => {
+                option.style.backgroundColor = '#f9fafb';
+            });
+            option.addEventListener('mouseleave', () => {
+                option.style.backgroundColor = 'transparent';
+            });
+
+            option.addEventListener('click', () => {
+                countryCodeBtn.innerHTML = `
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjE4IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRkYwMDAwIi8+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjMDAwMDAwIi8+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjMDA4MDAwIi8+Cjwvc3ZnPgo="
+                        alt="UAE Flag" width="20" height="15">
+                    <span>${country.code}</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                `;
+                dropdown.style.display = 'none';
+            });
+
+            dropdown.appendChild(option);
+        });
+
+        countryCodeBtn.parentElement.appendChild(dropdown);
+
+        // Toggle dropdown on click
+        countryCodeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = dropdown.style.display === 'block';
+            dropdown.style.display = isOpen ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!countryCodeBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.querySelector('.contact-form form');
 
