@@ -42,14 +42,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-
+            // Remove active from all tabs
             tabButtons.forEach(btn => btn.classList.remove('active'));
 
-
+            // Add active to clicked tab
             button.classList.add('active');
 
+            // Hide all content sections
+            const allSubsections = document.querySelectorAll('.services-subsection');
+            const allGrids = document.querySelectorAll('.services-grid');
 
+            allSubsections.forEach(subsection => {
+                subsection.classList.remove('active-content');
+            });
 
+            allGrids.forEach(grid => {
+                grid.classList.remove('active-content');
+            });
+
+            // Show appropriate content based on tab
+            const tabText = button.textContent.trim();
+
+            if (tabText === 'Business Owners') {
+                const ownerSubsection = document.querySelector('.owners-subsection');
+                const ownerGrid = document.querySelector('.owners-grid');
+                if (ownerSubsection) ownerSubsection.classList.add('active-content');
+                if (ownerGrid) ownerGrid.classList.add('active-content');
+            } else if (tabText === 'Drivers') {
+                const driversSubsection = document.querySelector('.drivers-content');
+                const driversGrid = document.querySelector('.drivers-grid');
+                if (driversSubsection) driversSubsection.classList.add('active-content');
+                if (driversGrid) driversGrid.classList.add('active-content');
+            } else if (tabText === 'Fleet & Logistics Companies') {
+                const fleetSubsection = document.querySelector('.fleet-content');
+                const fleetGrid = document.querySelector('.fleet-grid');
+                if (fleetSubsection) fleetSubsection.classList.add('active-content');
+                if (fleetGrid) fleetGrid.classList.add('active-content');
+            }
         });
     });
 });
