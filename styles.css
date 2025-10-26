@@ -891,12 +891,15 @@ section {
 
 .drivers-grid.active-content {
   display: flex;
-
   /* gap: clamp(24px, 4vw, 40px); */
   margin-top: clamp(40px, 6vw, 60px);
   justify-content: center;
+  width: max-content;
+  margin: auto;
 }
-
+.iti {
+  width: 100%;
+}
 .service-card {
   width: 60%;
   margin: 0 auto;
@@ -1255,41 +1258,72 @@ hr {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-.phone-input {
-  display: flex;
+/* intl-tel-input library customization */
+.intl-tel-input {
+  width: 100%;
   border: 1px solid #e5e7eb;
   border-radius: 999px;
   background-color: #f9fafb;
   overflow: hidden;
 }
 
-.country-code {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 20px;
+.intl-tel-input.allow-dropdown .selected-flag {
   background-color: #f3f4f6;
-  border-right: 1px solid #e5e7eb;
+  padding: 0 12px;
+  border-radius: 999px 0 0 999px;
+  cursor: pointer;
 }
 
-.country-code img {
-  border-radius: 2px;
+.intl-tel-input.allow-dropdown .selected-flag .arrow {
+  margin-left: 6px;
 }
 
-.country-code span {
-  font-weight: 500;
+.intl-tel-input input {
+  border: none;
+  background: transparent;
+  padding: 16px 20px;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   color: #111;
 }
 
-.phone-input input {
-  border: none;
-  background: transparent;
-  flex: 1;
-  padding: 16px 20px;
+.intl-tel-input input:focus {
+  outline: none;
+  background-color: white;
 }
 
-.phone-input input:focus {
-  box-shadow: none;
+.intl-tel-input.allow-dropdown input:focus,
+.intl-tel-input.allow-dropdown.iti-sdc-2 input {
+  padding-left: 6px;
+}
+
+.intl-tel-input .country-list {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  max-height: 300px;
+  margin-top: 4px;
+}
+
+.intl-tel-input .country-list .country {
+  padding: 8px 12px;
+}
+
+.intl-tel-input .country-list .country:hover {
+  background-color: #f9fafb;
+}
+
+.intl-tel-input .country-list .country.highlight {
+  background-color: #f3f4f6;
+}
+
+/* Focus state for the entire component */
+.intl-tel-input:focus-within {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  background-color: white;
+}
+
+.form-group .intl-tel-input {
+  display: block;
 }
 
 .submit-button {

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.0/build/css/intlTelInput.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -600,17 +601,8 @@
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <div class="phone-input">
-                                <div class="country-code">
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjE4IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRkYwMDAwIi8+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjMDAwMDAwIi8+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjMDA4MDAwIi8+Cjwvc3ZnPgo="
-                                        alt="UAE Flag" width="20" height="15">
-                                    <span>971</span>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M7 10l5 5 5-5z" />
-                                    </svg>
-                                </div>
-                                <input type="tel" placeholder="00000000">
-                            </div>
+                            <input type="tel" id="phone" class="phone-input-field"
+                                placeholder="Enter your phone number">
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
@@ -700,6 +692,7 @@
         <p>All Rights Reserved © Suliit 2025</p>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.0/build/js/intlTelInput.min.js"></script>
     <script src="script.js"></script>
 </body>
 
