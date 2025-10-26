@@ -55,7 +55,7 @@ body {
   right: 0;
   left: 0;
   z-index: 100;
-  width: clamp(85%, 70vw, 90%);
+  width: clamp(87%, 70vw, 90%);
   margin: auto;
   border-radius: clamp(16px, 3vw, 32px);
 }
@@ -106,7 +106,7 @@ body {
 }
 
 .hero {
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -754,6 +754,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .about-phone-1 {
@@ -904,7 +905,7 @@ section {
   width: 60%;
   margin: 0 auto;
   background: white;
-  padding: 20px;
+  padding: 20px 40px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -1091,14 +1092,27 @@ hr {
   line-height: 1.5;
 }
 .features-list li::before {
-  content: "✅  ";
+  content: "";
   position: absolute;
   left: 0;
-  padding-inline-end: 1rem;
-  border: none;
-  outline: none;
-  font-weight: 600;
-  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  background: #00bc00;
+  border-radius: 3px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.features-list li::after {
+  content: "✓";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .best-for {
