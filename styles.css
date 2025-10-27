@@ -85,6 +85,61 @@ body {
   gap: clamp(20px, 4vw, 40px);
 }
 
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #111;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+}
+
 .nav-links a {
   color: #111;
   text-decoration: none;
@@ -272,8 +327,8 @@ body {
   justify-content: center;
 }
 .hero-slide-visual:last-of-type {
-  top: -10rem !important;
-  left: -20rem !important;
+  top: -11rem;
+  left: 0;
 }
 .hero-slide-visual.active {
   opacity: 1;
@@ -283,12 +338,26 @@ body {
 
 .hero-slide-visual img {
   width: 1200%;
+  max-width: 1200%;
+  height: auto;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4))
     drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
 
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 1024px) {
+  .hero-slide-visual img {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slide-visual img {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+  }
 }
 
 .hero-slide-visual[data-slide="0"] img {
@@ -595,9 +664,16 @@ section {
 .section-header p {
   font-size: 16px;
   color: #6b7280;
-  max-width: 60%;
+  max-width: 85%;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section-header p {
+    max-width: 95%;
+    font-size: clamp(14px, 3.5vw, 16px);
+  }
 }
 
 .features-grid {
@@ -712,7 +788,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-.about-text{
+.about-text {
   flex: 1;
 }
 .about-text .section-label {
@@ -861,7 +937,7 @@ section {
 }
 
 .owners-grid.active-content {
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -893,18 +969,20 @@ section {
 }
 
 .drivers-grid.active-content {
-  display: flex;
-  /* gap: clamp(24px, 4vw, 40px); */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 4vw, 40px);
   margin-top: clamp(40px, 6vw, 60px);
-  justify-content: center;
-  width: max-content;
-  margin: auto;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .iti {
   width: 100%;
 }
 .service-card {
-  width: 60%;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   background: white;
   padding: 20px 40px;
@@ -920,45 +998,41 @@ section {
 .service-card img {
   width: 50px;
   height: 50px;
-  /* margin-bottom: 20px; */
 }
 
 .service-card h3 {
   color: #e63946;
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 700;
-  /* margin-bottom: 8px; */
 }
 
 .subtitle {
   color: #666;
   font-size: clamp(1rem, 2.2vw, 1.2rem);
   font-weight: 600;
-  /* margin-bottom: 16px; */
 }
 
 .ideal-for {
   color: #666;
   font-size: clamp(0.95rem, 2.1vw, 1.1rem);
-  /* margin-bottom: 24px; */
+
   line-height: 1.6;
 }
 
 .what-you-get {
-  /* margin-bottom: 20px; */
+  margin-bottom: clamp(12px, 2.5vw, 20px);
 }
 
 .what-you-get h4 {
   color: #e63946;
   font-weight: 600;
   font-size: clamp(1rem, 2.2vw, 1.2rem);
-  /* margin-bottom: 8px; */
 }
 
 .what-you-get p {
   color: #666;
   font-size: clamp(0.95rem, 2.1vw, 1.1rem);
-  /* margin-bottom: 0; */
+
   line-height: 1.6;
 }
 
@@ -966,7 +1040,6 @@ section {
   color: #e63946;
   font-weight: 600;
   font-size: clamp(1rem, 2.2vw, 1.2rem);
-  /* margin-bottom: 8px; */
 }
 
 .key-features ul {
@@ -1221,7 +1294,7 @@ hr {
   margin: 0;
   padding: 0;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  color: #1E1E1E;
+  color: #1e1e1e;
 }
 
 .contact-content {
@@ -1275,7 +1348,6 @@ hr {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-/* intl-tel-input library customization */
 .intl-tel-input {
   width: 100%;
   border: 1px solid #e5e7eb;
@@ -1333,7 +1405,6 @@ hr {
   background-color: #f3f4f6;
 }
 
-/* Focus state for the entire component */
 .intl-tel-input:focus-within {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
   background-color: white;
@@ -1551,12 +1622,16 @@ hr {
   }
 
   .hero-slide-visual img {
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-slide-visual[data-slide="0"] img {
+    max-width: 100%;
   }
 
   .hero-slide-visual[data-slide="1"] img {
+    max-width: 100%;
   }
 
   .features-grid,
@@ -1566,10 +1641,18 @@ hr {
     gap: clamp(20px, 4vw, 40px);
   }
 
+  .drivers-grid.active-content {
+    grid-template-columns: 1fr;
+  }
+
   .about-content,
   .contact-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: clamp(30px, 6vw, 50px);
+  }
+
+  .about-visual {
+    order: -1;
   }
 
   .faq-grid {
@@ -1594,12 +1677,17 @@ hr {
   }
 
   .nav-content {
-    flex-direction: column;
+    flex-direction: row;
     gap: clamp(12px, 2.5vw, 20px);
+    justify-content: space-between;
   }
 
   .nav-links {
     gap: clamp(16px, 3vw, 24px);
+  }
+
+  .language-switcher {
+    display: none;
   }
 
   .hero-text h1 {
@@ -1638,6 +1726,12 @@ hr {
   .service-card,
   .pricing-card {
     padding: clamp(20px, 4vw, 40px) clamp(16px, 3vw, 24px);
+  }
+
+  .owners-grid.active-content,
+  .drivers-grid.active-content,
+  .fleet-grid.active-content {
+    grid-template-columns: 1fr;
   }
 
   .survey-banner {
@@ -1697,5 +1791,170 @@ hr {
 
   .contact-form {
     padding: clamp(16px, 3vw, 24px) clamp(12px, 2.5vw, 20px);
+  }
+
+  .footer-downloads {
+    flex-direction: column;
+    gap: clamp(30px, 5vw, 40px);
+    text-align: center;
+  }
+
+  .services-tabs {
+    flex-wrap: wrap;
+    padding: clamp(8px, 2vw, 12px);
+  }
+
+  .tab-button {
+    padding: 8px clamp(12px, 3vw, 20px);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+
+  .pricing-card {
+    min-height: auto;
+  }
+
+  .service-card {
+    padding: clamp(16px, 3vw, 24px) clamp(16px, 3vw, 24px);
+  }
+
+  .topbar-content {
+    font-size: clamp(10px, 2vw, 14px);
+  }
+
+  .contact-info {
+    font-size: clamp(10px, 2vw, 14px);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header p {
+    max-width: 95%;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-visual {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-illustration {
+    order: -1;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .contact-illustration img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-visual img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    top: 0;
+  }
+
+  .hero {
+    margin-top: 0;
+    min-height: 100vh;
+  }
+
+  .hero-visual {
+    width: clamp(180px, 50vw, 280px);
+    height: clamp(220px, 60vw, 350px);
+  }
+
+  .hero-slide-visual {
+    top: 0;
+  }
+
+  .hero-slide-visual:last-of-type {
+    top: -3rem;
+    left: 0;
+  }
+
+  .services-tabs {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    width: 100%;
+  }
+
+  .about-text h2,
+  .about-text .subtitle {
+    text-align: center;
+  }
+
+  .about-text .description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  .hero-text p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .hero-visual {
+    width: 160px;
+    height: 200px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .app-badge img {
+    height: 35px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+
+  .feature-card h3,
+  .service-card h3 {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+  }
+
+  .survey-banner {
+    padding: 20px;
+  }
+
+  .survey-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .survey-button {
+    width: 100%;
   }
 }

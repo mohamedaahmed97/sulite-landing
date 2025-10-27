@@ -1,10 +1,7 @@
-/* RTL Support - Complete positioning adjustments */
-
 html[dir="rtl"] {
   direction: rtl;
 }
 
-/* Navigation and Header */
 html[dir="rtl"] .navbar,
 html[dir="rtl"] .nav-content,
 html[dir="rtl"] .nav-links,
@@ -22,7 +19,6 @@ html[dir="rtl"] .language-switcher {
   flex-direction: row-reverse;
 }
 
-/* Hero Section */
 html[dir="rtl"] .hero-content {
   flex-direction: row-reverse;
 }
@@ -36,19 +32,16 @@ html[dir="rtl"] .app-download {
   flex-direction: row-reverse;
 }
 
-/* Flip hero images for RTL */
 html[dir="rtl"] .hero-image-bg,
 html[dir="rtl"] .hero-visual img,
 html[dir="rtl"] .hero-background {
   transform: scaleX(-1);
 }
 
-/* Also flip background images */
 html[dir="rtl"] .hero-background {
   transform: scaleX(-1);
 }
 
-/* Adjust hero-visual position for RTL */
 html[dir="rtl"] .hero-visual {
   left: clamp(5%, 8vw, 12%);
   right: auto;
@@ -59,7 +52,6 @@ html[dir="rtl"] .hero-slide-visual:last-of-type {
   left: auto !important;
 }
 
-/* About Section */
 html[dir="rtl"] .about-content,
 html[dir="rtl"] .about-section {
   flex-direction: row-reverse;
@@ -73,7 +65,6 @@ html[dir="rtl"] .section-header {
   text-align: right;
 }
 
-/* Features Grid */
 html[dir="rtl"] .features-grid {
   direction: rtl;
 }
@@ -91,7 +82,6 @@ html[dir="rtl"] .survey-content-item {
   flex-direction: row-reverse;
 }
 
-/* Services Section */
 html[dir="rtl"] .services-section {
   text-align: right;
 }
@@ -112,7 +102,6 @@ html[dir="rtl"] .services-subsection {
   text-align: right;
 }
 
-/* Key Features and Lists */
 html[dir="rtl"] .features-list,
 html[dir="rtl"] .key-features ul,
 html[dir="rtl"] .what-you-get,
@@ -139,7 +128,6 @@ html[dir="rtl"] .key-features li::after {
   left: auto;
 }
 
-/* Pricing Section */
 html[dir="rtl"] .pricing-grid {
   direction: rtl;
 }
@@ -148,7 +136,6 @@ html[dir="rtl"] .pricing-card {
   text-align: right;
 }
 
-/* FAQ Section */
 html[dir="rtl"] .faq-grid {
   direction: rtl;
 }
@@ -166,7 +153,6 @@ html[dir="rtl"] .faq-icon {
   order: -1;
 }
 
-/* Contact Section */
 html[dir="rtl"] .contact-content {
   flex-direction: row-reverse;
 }
@@ -179,7 +165,6 @@ html[dir="rtl"] .form-group label {
   text-align: right;
 }
 
-/* Footer */
 html[dir="rtl"] .footer-content {
   flex-direction: row-reverse;
 }
@@ -200,7 +185,6 @@ html[dir="rtl"] .footer-downloads {
   flex-direction: row-reverse;
 }
 
-/* Download Section */
 html[dir="rtl"] .download-section {
   text-align: right;
 }
@@ -214,13 +198,11 @@ html[dir="rtl"] .survey-text {
   text-align: right;
 }
 
-/* Slider Controls */
 html[dir="rtl"] .slider-controls,
 html[dir="rtl"] .slider-dots {
   direction: rtl;
 }
 
-/* Utilities */
 html[dir="rtl"] .section-label {
   text-align: right;
 }

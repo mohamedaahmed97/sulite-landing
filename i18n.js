@@ -1,10 +1,10 @@
-// Translation System using data-i18n attributes
+
 const i18n = {
     currentLang: 'en',
 
     texts: {
         en: {
-            // Navigation
+
             'topbar-slogan': 'We Provide Best Services For You',
             'nav-lang': 'Language EN',
             'nav-about': 'About',
@@ -12,19 +12,19 @@ const i18n = {
             'nav-pricing': 'Pricing',
             'nav-contact': 'Contact',
 
-            // Hero - Store
+
             'hero-store-title': 'Weideliver Store Solutions',
             'hero-store-desc': "Never miss a sale. Deliver More. Pay Less. Grow Faster, Don't Let Delivery Costs Eat Your Profits.",
             'hero-store-cta': 'Join us Now and start saving!',
             'hero-store-app': 'Download Weideliver Store app',
 
-            // Hero - Driver
+
             'hero-driver-title': 'For Drivers: Build Your Career on Your Terms',
             'hero-driver-desc': 'Join a platform that values your work and gives you the flexibility to earn the way you want.',
             'hero-driver-cta': 'Start Driving Today!',
             'hero-driver-app': 'Download Weideliver Driver app',
 
-            // About
+
             'about-label': 'Why Choose Weideliver?',
             'about-title': 'The Regional Advantage',
             'about-desc': 'We are more than a software provider; we are your local partner in growth. Our solution is built in the region, for the region.',
@@ -38,7 +38,7 @@ const i18n = {
             'survey-desc': "Let us know how we're doing — your feedback drives our improvements.",
             'survey-button': 'Start Survey',
 
-            // About Section 2
+
             'about-section-label': 'About Weideliver',
             'about-section-title': 'Powering Commerce, One Delivery at a Time',
             'about-section-subtitle': 'Driven by Technology, Defined by Partnership.',
@@ -46,7 +46,7 @@ const i18n = {
             'download-store-app': 'Download Weideliver Store app',
             'download-driver-app': 'Download Weideliver Driver app',
 
-            // Services
+
             'services-label': 'Our Services',
             'services-title': 'Tailored Logistics Solutions for Everyone',
             'services-desc': "At Weideliver, we don't believe in one-size-fits-all. We provide specialized platforms that empower each key player in the delivery ecosystem—businesses, drivers, and fleet partners—to operate more efficiently and profitably.",
@@ -56,7 +56,7 @@ const i18n = {
             'services-subheading': 'Launch & Scale Your Delivery',
             'services-subdesc': 'Offer reliable, last-mile delivery without the overhead of managing a full-time team. Choose the model that fits your stage of growth.',
 
-            // Service Cards - Basic
+
             'basic-title': 'Weideliver Basic',
             'basic-subtitle': 'The Profit Maximizer',
             'basic-ideal': 'The established businesses with an existing, efficient delivery team.',
@@ -69,7 +69,7 @@ const i18n = {
             'basic-outcome': 'The Outcome',
             'basic-outcome-desc': 'Turn your delivery operation from a cost center into a profit center, earning an average of AED 3,225+/month at 600 orders.',
 
-            // Service Cards - On-Demand
+
             'ondemand-title': 'Weideliver On-Demand',
             'ondemand-subtitle': 'The Flexible Starter Plan',
             'ondemand-ideal': 'New businesses, seasonal stores, or those wanting to test delivery with zero risk.',
@@ -82,7 +82,7 @@ const i18n = {
             'ondemand-outcome': 'The Outcome',
             'ondemand-outcome-desc': 'Prove the value of delivery for your business without any upfront commitment, and scale seamlessly when you\'re ready.',
 
-            // Service Cards - Pro
+
             'pro-title': 'Weideliver Pro Plan',
             'pro-subtitle': 'The Full-Service Solution',
             'pro-ideal': 'Restaurants, Pharmacies, Supermarkets, and Retailers who want a complete, hands-off delivery service.',
@@ -96,12 +96,12 @@ const i18n = {
             'pro-outcome': 'The Outcome',
             'pro-outcome-desc': 'Focus 100% on your core business while we handle your entire delivery operation, helping you increase sales and customer satisfaction.',
 
-            // Pricing
+
             'pricing-label': 'Pricing',
             'pricing-title': 'Transparent Pricing Built for Growth',
             'pricing-desc': 'No hidden fees. No surprises. Choose the plan that aligns with your business goals and start delivering with confidence.',
 
-            // FAQ
+
             'faq-label': 'FAQ',
             'faq-title': 'Your Questions, Answered',
             'faq-desc': 'Explore our most asked questions and learn how we can help you succeed.',
@@ -114,7 +114,7 @@ const i18n = {
             'faq-q4': 'We want to think about it ?',
             'faq-a4': "I understand. Let me lock in your FIRST MONTH FREE offer today. You can test the entire system with our On-Demand Plan and see the results for yourself, risk-free",
 
-            // Contact
+
             'contact-label': 'Contact Us',
             'contact-title': 'Connect With Our Team',
             'contact-desc': "Have a question or idea? We'd love to hear from you.",
@@ -128,7 +128,7 @@ const i18n = {
             'contact-message-placeholder': 'Enter Your Message',
             'contact-send': 'Send',
 
-            // Footer
+
             'footer-about': 'About',
             'footer-services': 'Services',
             'footer-pricing': 'Pricing',
@@ -140,7 +140,7 @@ const i18n = {
         },
 
         ar: {
-            // Navigation
+
             'topbar-slogan': 'نحن نقدم أفضل الخدمات لك',
             'nav-lang': 'العربية',
             'nav-about': 'من نحن',
@@ -148,19 +148,19 @@ const i18n = {
             'nav-pricing': 'الأسعار',
             'nav-contact': 'اتصل بنا',
 
-            // Hero - Store
+
             'hero-store-title': 'حلول متجر Weideliver',
             'hero-store-desc': 'لا تفوت أي مبيعات. سلم أكثر. ادفع أقل. نم أسرع، لا تدع تكاليف التسليم تلتهم أرباحك.',
             'hero-store-cta': 'انضم إلينا الآن وابدأ التوفير!',
             'hero-store-app': 'تحميل تطبيق متجر Weideliver',
 
-            // Hero - Driver
+
             'hero-driver-title': 'للسائقين: بناء مسيرتك المهنية على شروطك',
             'hero-driver-desc': 'انضم إلى منصة تقدر عملك وتمنحك المرونة لكسب المال بالطريقة التي تريدها.',
             'hero-driver-cta': 'ابدأ القيادة اليوم!',
             'hero-driver-app': 'تحميل تطبيق سائق Weideliver',
 
-            // About
+
             'about-label': 'لماذا تختار Weideliver؟',
             'about-title': 'الميزة الإقليمية',
             'about-desc': 'نحن أكثر من مجرد مزود برمجيات؛ نحن شريكك المحلي في النمو. تم بناء حلنا في المنطقة، للمنطقة.',
@@ -174,7 +174,7 @@ const i18n = {
             'survey-desc': 'أخبرنا عن أدائنا - ملاحظاتك تدفع تحسيناتنا.',
             'survey-button': 'ابدأ الاستطلاع',
 
-            // About Section 2
+
             'about-section-label': 'حول Weideliver',
             'about-section-title': 'تشغيل التجارة، توصيل واحد في كل مرة',
             'about-section-subtitle': 'مدفوع بالتكنولوجيا، محدد بالشراكة.',
@@ -182,7 +182,7 @@ const i18n = {
             'download-store-app': 'تحميل تطبيق متجر Weideliver',
             'download-driver-app': 'تحميل تطبيق سائق Weideliver',
 
-            // Services
+
             'services-label': 'خدماتنا',
             'services-title': 'حلول لوجستية مخصصة للجميع',
             'services-desc': 'في Weideliver، لا نؤمن بمقاس واحد يناسب الجميع. نوفر منصات متخصصة تمكّن كل لاعب رئيسي في نظام التوصيل - الأعمال والسائقين وشركاء الأسطول - من العمل بشكل أكثر كفاءة وربحية.',
@@ -192,7 +192,7 @@ const i18n = {
             'services-subheading': 'إطلاق وتوسيع خدمة التوصيل الخاصة بك',
             'services-subdesc': 'قدم توصيلاً موثوقاً في الرحلة الأخيرة دون الحاجة إلى إدارة فريق بدوام كامل. اختر النموذج الذي يناسب مرحلة نموك.',
 
-            // Service Cards - Basic
+
             'basic-title': 'Weideliver Basic',
             'basic-subtitle': 'محسّن الربح',
             'basic-ideal': 'الأعمال التجارية الراسخة التي لديها فريق توصيل موجود وفعال.',
@@ -205,7 +205,7 @@ const i18n = {
             'basic-outcome': 'النتيجة',
             'basic-outcome-desc': 'حول عمليات التوصيل الخاصة بك من مركز تكلفة إلى مركز ربح، بإمكانك كسب متوسط 3,225+ درهم/شهر في 600 طلب.',
 
-            // Service Cards - On-Demand
+
             'ondemand-title': 'Weideliver On-Demand',
             'ondemand-subtitle': 'الخطة المرنة للمبتدئين',
             'ondemand-ideal': 'الأعمال التجارية الجديدة، المتاجر الموسمية، أو من يريدون اختبار التوصيل بدون مخاطر.',
@@ -218,7 +218,7 @@ const i18n = {
             'ondemand-outcome': 'النتيجة',
             'ondemand-outcome-desc': 'أثبت قيمة التوصيل لأعمالك التجارية بدون أي التزام مسبق، وتوسّع بسلاسة عندما تكون مستعداً.',
 
-            // Service Cards - Pro
+
             'pro-title': 'خطة Weideliver Pro',
             'pro-subtitle': 'الحل الكامل للخدمة',
             'pro-ideal': 'المطاعم والصيدليات ومتاجر البقالة ومتاجر التجزئة الذين يريدون خدمة توصيل كاملة بدون تدخل.',
@@ -232,12 +232,12 @@ const i18n = {
             'pro-outcome': 'النتيجة',
             'pro-outcome-desc': 'ركز 100% على عملك الأساسي بينما نتعامل مع عملية التوصيل بأكملها، مما يساعدك على زيادة المبيعات ورضا العملاء.',
 
-            // Pricing
+
             'pricing-label': 'الأسعار',
             'pricing-title': 'أسعار شفافة مبنيّة للنمو',
             'pricing-desc': 'لا رسوم خفية. لا مفاجآت. اختر الخطة التي تتماشى مع أهداف عملك وابدأ التوصيل بثقة.',
 
-            // FAQ
+
             'faq-label': 'الأسئلة الشائعة',
             'faq-title': 'إجابات على أسئلتك',
             'faq-desc': 'استكشف أسئلتنا الأكثر تكراراً وتعلم كيف يمكننا مساعدتك على النجاح.',
@@ -250,7 +250,7 @@ const i18n = {
             'faq-q4': 'نريد التفكير في الأمر؟',
             'faq-a4': 'أفهم. دعني أقفل عرض FIRST MONTH FREE الخاص بك اليوم. يمكنك اختبار النظام بأكمله مع خطة الطلب الفوري ورؤية النتائج بنفسك، بدون مخاطر',
 
-            // Contact
+
             'contact-label': 'اتصل بنا',
             'contact-title': 'تواصل مع فريقنا',
             'contact-desc': 'لديك سؤال أو فكرة؟ نحب أن نسمع منك.',
@@ -264,7 +264,7 @@ const i18n = {
             'contact-message-placeholder': 'أدخل رسالتك',
             'contact-send': 'إرسال',
 
-            // Footer
+
             'footer-about': 'من نحن',
             'footer-services': 'الخدمات',
             'footer-pricing': 'الأسعار',
@@ -279,11 +279,11 @@ const i18n = {
     translate(lang) {
         this.currentLang = lang;
 
-        // Change direction
+
         document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
         document.documentElement.setAttribute('lang', lang);
 
-        // Translate all elements with data-i18n
+
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (this.texts[lang][key]) {
@@ -291,7 +291,7 @@ const i18n = {
             }
         });
 
-        // Translate placeholders
+
         document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
             const key = element.getAttribute('data-i18n-placeholder');
             if (this.texts[lang][key]) {
@@ -306,9 +306,9 @@ const i18n = {
     }
 };
 
-// Initialize
+
 window.addEventListener('DOMContentLoaded', function () {
-    // Add click handler to language switcher
+
     const langSwitcher = document.querySelector('.language-switcher');
     if (langSwitcher) {
         langSwitcher.addEventListener('click', function () {

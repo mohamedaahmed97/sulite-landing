@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active from all tabs
+
             tabButtons.forEach(btn => btn.classList.remove('active'));
 
-            // Add active to clicked tab
+
             button.classList.add('active');
 
-            // Hide all content sections
+
             const allSubsections = document.querySelectorAll('.services-subsection');
             const allGrids = document.querySelectorAll('.services-grid');
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 grid.classList.remove('active-content');
             });
 
-            // Show appropriate content based on tab
+
             const tabText = button.textContent.trim();
 
             if (tabText === 'Business Owners') {
@@ -105,23 +105,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Country Code Selector with intl-tel-input library
+
 document.addEventListener('DOMContentLoaded', function () {
     const phoneInput = document.querySelector('#phone');
 
     if (phoneInput) {
-        // Initialize intl-tel-input
+
         const iti = window.intlTelInput(phoneInput, {
-            initialCountry: 'ae', // UAE as default
+            initialCountry: 'ae',
             preferredCountries: ['ae', 'sa', 'kw', 'bh', 'om', 'qa', 'eg', 'jo'],
             separateDialCode: true,
             utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.0/build/js/utils.js'
         });
 
-        // Store the instance globally for later use
+
         window.phoneInputInstance = iti;
 
-        // Handle form submission with phone validation
+
         const form = phoneInput.closest('form');
         if (form) {
             form.addEventListener('submit', function (e) {
@@ -228,50 +228,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    if (window.innerWidth <= 768) {
-        const navContent = document.querySelector('.nav-content');
-        const navLinks = document.querySelector('.nav-links');
-
-        if (navContent && navLinks) {
-
-            const mobileMenuButton = document.createElement('button');
-            mobileMenuButton.innerHTML = '☰';
-            mobileMenuButton.className = 'mobile-menu-button';
-            mobileMenuButton.style.cssText = `
-                display: none;
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                color: #111;
-            `;
-
-            navContent.appendChild(mobileMenuButton);
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function () {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
 
 
-            mobileMenuButton.addEventListener('click', () => {
-                navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
             });
+        });
 
 
-            navLinks.style.display = 'none';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.gap = '16px';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.background = 'white';
-            navLinks.style.padding = '20px';
-            navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-
-
-            if (window.innerWidth <= 768) {
-                mobileMenuButton.style.display = 'block';
+        document.addEventListener('click', function (event) {
+            if (!navLinks.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
             }
-        }
+        });
     }
 });
 
